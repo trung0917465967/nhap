@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Cviebrock\EloquentSluggable\Services\SlugService;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -12,11 +12,17 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+//    public function index()
+//    {
+//        $products = Product::latest()->paginate(5);
+//        return view('products.index',compact('products'))
+//            ->with('i', (request()->input('page', 1) - 1) * 5);
+//    }
     public function index()
     {
-        $products = Product::latest()->paginate(5);
-        return view('products.index',compact('products'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        $data['products'] = product::orderBy('id','desc')->paginate(10);
+
+        return view('products.list',$data);
     }
 
     /**
@@ -26,7 +32,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
     /**
@@ -37,7 +43,21 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'detail' => 'required',
+        ]);
+
+        $insert = [
+            'slug' => SlugService::createSlug(Product::class, 'slug', $request->name),
+            'name' => $request->name,
+            'detail' => $request->detail,
+        ];
+
+        Product::insertGetId($insert);
+
+        return Redirect::to('products')
+            ->with('success','Greate! posts created successfully.');
     }
 
     /**
