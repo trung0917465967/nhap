@@ -19,6 +19,10 @@ class UserController extends Controller
     {
         return view('admin.register');
     }
+    public function layout()
+    {
+        return view('admin.layout');
+    }
     /**
      * Show the form for creating a new resource.
      *
