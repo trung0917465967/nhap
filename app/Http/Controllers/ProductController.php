@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use App\Product;
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Redirect;
 class ProductController extends Controller
 {
     /**
@@ -20,9 +20,9 @@ class ProductController extends Controller
 //    }
     public function index()
     {
-        $data['products'] = product::orderBy('id','desc')->paginate(10);
+//        $data['products'] = product::orderBy('id','desc')->paginate(10);,$data
 
-        return view('products.list',$data);
+        return view('admin.products.index');
     }
 
     /**
