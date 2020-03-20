@@ -25,4 +25,13 @@ route::group(['prefix'=>'admin'],function() {
 //    Route::get('logout',[ 'as' => 'logout', 'uses' => 'UserController@logout']);
     Route::resource('user', 'userController');
 });
+route::get('user.login',[ 'as'   => 'user.login', 'uses' => 'UserController@login']);
 
+ Route::get('logout',[ 'as' => 'logout', 'uses' => 'UserController@logout']);
+
+
+ route::get('user.login',[ 'as'   => 'user.login', 'uses' => 'UserController@login']);
+
+ route::get('user.register',[ 'as'   => 'user.register', 'uses' => 'UserController@register']);
+
+ route::get('user.index',[ 'as'   => 'user.index', 'uses' => 'UserController@index']);

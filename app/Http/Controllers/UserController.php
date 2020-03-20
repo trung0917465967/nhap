@@ -13,11 +13,11 @@ class UserController extends Controller
      */
     public function login()
     {
-        return view('admin.login');
+        return view('admin.user.login');
     }
     public function register()
     {
-        return view('admin.register');
+        return view('admin.user.register');
     }
     /**
      * Show the form for creating a new resource.
@@ -26,7 +26,15 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create');
+    }
+    public function index()
+    {
+        return view('admin.user.index');
+    }
+    public function jsgrid()
+    {
+        return view('admin.user.jsgrid');
     }
 
     /**
