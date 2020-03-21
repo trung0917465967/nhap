@@ -69,13 +69,13 @@
     </a>
     <ul class="nav nav-treeview">
         <li class="nav-item">
-            <a href="{{ route('products.index')}}" class="nav-link active">
+            <a href="{{ route('products.create')}}" class="nav-link active">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Danh sách sản phẩm</p>
             </a>
         </li>
         <li class="nav-item">
-            <a href="{{ route('products.create')}}"class="nav-link">
+            <a href="../../index2.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Thêm sản phẩm</p>
             </a>
@@ -88,7 +88,8 @@
         </li>
     </ul>
 </li>
-    @endsection
+@include('admin.leftforproduct')
+@endsection
 @section('content')
     <div class="card">
         <div class="card-header">

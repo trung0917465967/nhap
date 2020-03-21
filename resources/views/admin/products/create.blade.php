@@ -42,6 +42,7 @@
         }
     </style>
 @extends('admin.layout')
+
 @section('active')
     <li class="nav-item has-treeview">
         <a href="#" class="nav-link active">
