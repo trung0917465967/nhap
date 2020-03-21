@@ -42,7 +42,6 @@
         }
     </style>
 @extends('admin.layout')
-
 @section('active')
     <li class="nav-item has-treeview">
         <a href="#" class="nav-link active">
@@ -70,6 +69,8 @@
             </li>
         </ul>
     </li>
+    @include('admin.products.leftforproduct')
+    @include('admin.products.leftforprodbyblog')
 @endsection
 @section('content')
     <div class="card card-primary">

@@ -1,7 +1,7 @@
 <li class="nav-item has-treeview">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-tachometer-alt"></i>
-        <p>tài khoản<i class="right fas fa-angle-left"></i></p>
+        <p>Sản phẩm<i class="right fas fa-angle-left"></i></p>
     </a>
     <ul class="nav nav-treeview">
         <li class="nav-item">
@@ -27,25 +27,25 @@
 <li class="nav-item has-treeview">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-tachometer-alt"></i>
-        <p>Sản Phẩm<i class="right fas fa-angle-left"></i></p>
+        <p>Tài khoán<i class="right fas fa-angle-left"></i></p>
     </a>
     <ul class="nav nav-treeview">
         <li class="nav-item">
-            <a href="{{ route('products.create')}}" class="nav-link">
+            <a href="{{ route('user.index')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>đồ</p>
+                <p>Danh sách tài khoản</p>
             </a>
         </li>
         <li class="nav-item">
-            <a href="../../index2.html" class="nav-link">
+            <a href="{{ route('user.create')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Thêm sản phẩm</p>
+                <p>Thêm tài khoản</p>
             </a>
         </li>
         <li class="nav-item">
             <a href="../../index3.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Sửa sản phẩm</p>
+                <p>Sửa tài khoản</p>
             </a>
         </li>
     </ul>

@@ -40,36 +40,37 @@
             font-size: .8em;
             color: #ff6666;
         }
-    </style>
+</style>
 @extends('admin.layout')
 @section('active')
-@include('admin.leftforuser')
+@include('admin.user.leftforuser')
     <li class="nav-item has-treeview">
         <a href="#" class="nav-link active">
             <i class="nav-icon fas fa-tachometer-alt"></i>
-            <p>Sản Phẩm<i class="right fas fa-angle-left"></i></p>
+            <p>Tài khoản <i class="right fas fa-angle-left"></i></p>
         </a>
         <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="{{ route('products.index')}}" class="nav-link">
+                <a href="{{ route('user.index')}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Danh sách sản phẩm</p>
+                    <p>Danh sách tài khoản</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('products.create')}}" class="nav-link active">
+                <a href="{{ route('user.create')}}" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Thêm sản phẩm</p>
+                    <p>Thêm mới tài khoản</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="../../index3.html" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Sửa sản phẩm</p>
+                    <p>Sửa tài khoản</p>
                 </a>
             </li>
         </ul>
     </li>
+@include('admin.user.leftforuserbyblog')
 @endsection
 @section('content')
     <div class="card card-primary">
@@ -116,43 +117,4 @@
             </div>
         </form>
     </div>
-@include('admin.user.leftforuserbybolg')
 @endsection
-<script>
-$().ready(function() {
-$("#form").validate({
-onfocusout: false,
-onkeyup: false,
-onclick: false,
-rules: {
-"name": {
-required: true,
-maxlength: 1
-},
-"password": {
-required: true,
-minlength: 8
-},
-"re-password": {
-equalTo: "#password",
-minlength: 8
-
-}
-},
-messages: {
-"name": {
-required: "Bắt buộc nhập username",
-maxlength: "Hãy nhập tối đa 15 ký tự"
-},
-"password": {
-required: "Bắt buộc nhập password",
-minlength: "Hãy nhập ít nhất 8 ký tự"
-},
-"re-password": {
-equalTo: "Hai password phải giống nhau",
-minlength: "Hãy nhập ít nhất 8 ký tự"
-}
-}
-});
-});
-</script>

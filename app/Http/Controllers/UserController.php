@@ -32,14 +32,10 @@ class UserController extends Controller
     {
         return view('admin.user.create');
     }
-    
+
     public function index()
     {
         return view('admin.user.index');
-    }
-    public function jsgrid()
-    {
-        return view('admin.user.jsgrid');
     }
 
     /**

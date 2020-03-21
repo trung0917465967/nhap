@@ -57,7 +57,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="../../index2.html" class="nav-link">
+            <a href="{{ route('products.create')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Thêm sản phẩm</p>
             </a>
@@ -70,7 +70,8 @@
         </li>
     </ul>
 </li>
-@include('admin.leftforproduct')
+@include('admin.products.leftforproduct')
+@include('admin.products.leftforprodbyblog')
 @endsection
 @section('content')
     <div class="card">
