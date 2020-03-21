@@ -41,7 +41,6 @@
     }
 </style>
 @extends('admin.layout')
-
 @section('active')
     @include('admin.leftforuser')
 <li class="nav-item has-treeview">
@@ -57,7 +56,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="{{ route('products.create')}}"class="nav-link">
+            <a href="{{ route('user.create')}}"class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Thêm sản phẩm</p>
             </a>
@@ -70,6 +69,7 @@
         </li>
     </ul>
 </li>
+@include('admin.user.leftforuserbyblog')
 @endsection
 
 @section('content')
@@ -82,8 +82,8 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
+                    <th>ID</th>
+                    <th>Tên sản phẩm</th>
                     <th>Platform(s)</th>
                     <th>Engine version</th>
                     <th>CSS grade</th>
@@ -503,7 +503,7 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                    <th>Rendering engine</th>
+                    <th>ID</th>
                     <th>Browser</th>
                     <th>Platform(s)</th>
                     <th>Engine version</th>

@@ -35,3 +35,9 @@ routeAlias::get('user.login',[ 'as'   => 'user.login', 'uses' => 'UserController
  routeAlias::get('user.register',[ 'as'   => 'user.register', 'uses' => 'UserController@register']);
 
  routeAlias::get('user.index',[ 'as'   => 'user.index', 'uses' => 'UserController@index']);
+
+ routeAlias::get('blog.index',[ 'as'   => 'blog.index', 'uses' => 'BlogController@index']);
+
+ routeAlias::get('products.create',[ 'as'   => 'products.create', 'uses' => 'ProductController@create']);
+
+ routeAlias::get('blog.add',[ 'as'   => 'blog.add', 'uses' => 'BlogController@add']);

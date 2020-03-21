@@ -41,7 +41,6 @@
     }
 </style>
 @extends('admin.layout')
-
 @section('active')
     @include('admin.leftforblog')
 <li class="nav-item has-treeview">
@@ -51,21 +50,21 @@
     </a>
     <ul class="nav nav-treeview">
         <li class="nav-item">
-            <a href="{{ route('products.index')}}" class="nav-link active">
+            <a href="{{ route('blog.index')}}" class="nav-link active">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Danh sách sản phẩm</p>
+                <p>Danh sách blog</p>
             </a>
         </li>
         <li class="nav-item">
-            <a href="{{ route('products.create')}}"class="nav-link">
+            <a href="{{ route('blog.add')}}"class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Thêm sản phẩm</p>
+                <p>Thêm blog</p>
             </a>
         </li>
         <li class="nav-item">
             <a href="../../index3.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Sửa sản phẩm</p>
+                <p>Sửa blog</p>
             </a>
         </li>
     </ul>
@@ -82,11 +81,11 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
+                    <th>ID</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Loại sản phẩm</th>
+                    <th>Nội dung</th>
+                    <th>Ảnh</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -138,7 +137,7 @@
                 </tr>
                 <tr>
                     <td>Trident</td>
-                    <td>AOL browser (AOL desktop)</td>
+                    <td>AOL Tên sản phẩm (AOL desktop)</td>
                     <td>Win XP</td>
                     <td>6</td>
                     <td>A</td>
@@ -194,7 +193,7 @@
                 </tr>
                 <tr>
                     <td>Gecko</td>
-                    <td>Netscape Browser 8</td>
+                    <td>Netscape Tên sản phẩm 8</td>
                     <td>Win 98SE+</td>
                     <td>1.7</td>
                     <td>A</td>
@@ -397,7 +396,7 @@
                 </tr>
                 <tr>
                     <td>Presto</td>
-                    <td>Nintendo DS browser</td>
+                    <td>Nintendo DS Tên sản phẩm</td>
                     <td>Nintendo DS</td>
                     <td>8.5</td>
                     <td>C/A<sup>1</sup></td>
@@ -488,7 +487,7 @@
                 </tr>
                 <tr>
                     <td>Misc</td>
-                    <td>PSP browser</td>
+                    <td>PSP Tên sản phẩm</td>
                     <td>PSP</td>
                     <td>-</td>
                     <td>C</td>
@@ -503,11 +502,11 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
+                    <th>ID</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Loại sản phẩm</th>
+                    <th>Nội dung</th>
+                    <th>Ảnh</th>
                 </tr>
                 </tfoot>
             </table>
