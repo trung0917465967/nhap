@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route as routeAlias;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,28 +11,27 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/Route::resource('products', 'ProductController');
-Route::get('products.index', ['as' => 'products.index', 'uses' => 'ProductController@index']);
-Route::get('/', function () {
+*/
+routeAlias::resource('products', 'ProductController');
+routeAlias::get('products.index', ['as' => 'products.index', 'uses' => 'ProductController@index']);
+routeAlias::get('/', function () {
     return view('welcome');
 });
 //Route::get('admin.index', ['as' => 'admin.index', 'uses' => 'UserController@index']);
-route::group(['prefix'=>'admin'],function() {
-  Route::get('admin.register', [ 'as' => 'register', 'uses' => 'UserController@register']);
+routeAlias::group(['prefix'=>'admin'],function() {
+  routeAlias::get('admin.register', [ 'as' => 'register', 'uses' => 'UserController@register']);
 //    Route::post('store',[ 'as' => 'store', 'uses' =>  'UserController@store']);
-  route::get('admin.login',[ 'as' => 'admin.index', 'uses' => 'UserController@login']);
-    route::get('admin.layout',[ 'as' => 'admin.layout', 'uses' => 'UserController@layout']);
+  routeAlias::get('user.login',[ 'as'   => 'user.login', 'uses' => 'UserController@login']);
+    routeAlias::get('admin.layout',[ 'as' => 'admin.layout', 'uses' => 'UserController@layout']);
 //    route::post('login',[ 'as' => 'login', 'uses' => 'UserController@postlogin']);
 //    Route::get('logout',[ 'as' => 'logout', 'uses' => 'UserController@logout']);
-    Route::resource('user', 'userController');
+    routeAlias::resource('user', 'userController');
 });
-route::get('user.login',[ 'as'   => 'user.login', 'uses' => 'UserController@login']);
+routeAlias::get('user.login',[ 'as'   => 'user.login', 'uses' => 'UserController@login']);
 
- Route::get('logout',[ 'as' => 'logout', 'uses' => 'UserController@logout']);
+ routeAlias::get('logout',[ 'as' => 'logout', 'uses' => 'UserController@logout']);
 
 
- route::get('user.login',[ 'as'   => 'user.login', 'uses' => 'UserController@login']);
+ routeAlias::get('user.register',[ 'as'   => 'user.register', 'uses' => 'UserController@register']);
 
- route::get('user.register',[ 'as'   => 'user.register', 'uses' => 'UserController@register']);
-
- route::get('user.index',[ 'as'   => 'user.index', 'uses' => 'UserController@index']);
+ routeAlias::get('user.index',[ 'as'   => 'user.index', 'uses' => 'UserController@index']);

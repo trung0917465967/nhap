@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Botble\Assets\Providers\AssetsServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -189,7 +190,7 @@ return [
     */
 
     'aliases' => [
-
+        'Assets' => Botble\Assets\Facades\AssetsFacade::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
